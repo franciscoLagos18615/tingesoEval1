@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="mainModule">
+<head>
+  <meta charset="utf-8">
+  <title>Aplicacion basica Tingeso</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+
+<div id="main">
+      <div id="content" class="container" ng-controller="StudentController"  ng-init="getStudents()" ng-show="students != null">
+        <div class="student-info-bottom" style="height:300px;overflow:auto;">
+           <table style="width:100%">
+           <tr>
+            <th><b>Nombre</b></th>
+                <th><b>Apellido</b></th>
+                <th><b>Rut</b></th>
+                <th><b>Carrera</b></th>
+                  <th><b>Año Ingreso</b></th>
+                <th><b>Email</b></th>
+            </tr>
+            <tr ng-repeat="student in students">
+              <td>{{student.primer_nombre}}</td>
+              <td>{{student.apellido}}</td>
+              <td>{{student.rut}}</td>
+              <td>{{student.carrera}}</td>
+              <td>{{student.anio_ingreso}}</td>
+               <td>{{student.email}}</td>
+            </tr>
+          </table> 
+        </div>
+      </div>
+    </div>
+
+  <!-- Tweet -->
+    <div id="tweet">
+      <div class="container">
+        <section>
+          
+        </section>
+      </div>
+    </div>
+  <!-- /Tweet -->
+
+  <!-- Footer -->
+    <div id="footer">
+      <div class="container">
+        <section>
+          <header>
+            <h2>Ingresar Alumnos al sistema</h2>
+          </header>
+
+          <div class="form" ng-controller="StudentController" >
+            <div class= "container123">
+            <label for="primer_nombre"><font color="Black">Nombre:</font></label>
+            <input id="primer_nombre" ng-model="primer_nombre" type="text" />
+            </div>
+            <div class= "container123">
+            <label for="apellido"><font color="Black">Apellido:</font></label>
+            <input id="apellido" ng-model="apellido" type="text" />
+            </div>
+            <div class= "container123">
+            <label for="rut"><font color="Black">Rut:</font></label>
+            <input id="rut" ng-model="rut" type="text" />
+            </div>
+            <div class= "container123">
+            <label for="email"><font color="Black">Email:</font></label>
+            <input id="email" ng-model="email" type="text" />
+            </div>
+            <div class= "container123">
+            <label for="carrera"><font color="Black">Carrera:</font></label>
+            <input id="carrera" ng-model="carrera" type="text" />
+            </div>
+            <div class= "container123">
+            <label for="anio_ingreso"><font color="black">Año Ingreso:</font></label>
+            <input id="anio_ingreso" ng-model="anio_ingreso" type="number" />
+            </div>
+            <button  type="submit" class="btn btn-default" ng-click="addStudent()">Ingresar alumno</button>
+          </div>
+          
+        </section>
+      </div>
+    </div>
+  <!-- /Footer -->
+
+  
+
+
+
+  
+ <!-- Agregamos angular para que funcione  -->
+  <script src="js/shared/angular.js"></script>
+  
+
+<!-- Angular: app.js -->
+<script src="js/app.js"></script>
+
+<!-- Angular: Controladores -->
+<script src="js/StudentController.js"></script>
+
+  
+</body>
+</html>

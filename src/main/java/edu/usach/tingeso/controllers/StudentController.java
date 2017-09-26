@@ -27,7 +27,7 @@ public class StudentController {
      //return studentRepository.findOne(lid);
     }
 
-    @RequestMapping(path ="\new", method= RequestMethod.POST)
+    @RequestMapping(path ="/new", method= RequestMethod.POST)
 
     public Integer createStudent(@RequestBody Student student){
         Student nuevo = new Student();

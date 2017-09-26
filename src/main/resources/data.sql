@@ -9,11 +9,11 @@ INSERT INTO `estudiantes`.`student`
 VALUES
   (1,
    2015,
-   'delgado',
+   'perez',
    'Ing.Civil en Informatica',
-   'sebastian.delgado@usach.cl',
-   'sebastian',
-   '18.888.888-8');
+   'jose.perez@usach.cl',
+   'jose',
+   '12.222.222-2');
 
 INSERT INTO `estudiantes`.`student`
 (`alumno_id`,
@@ -26,9 +26,8 @@ INSERT INTO `estudiantes`.`student`
 VALUES
   (2,
    2014,
-   'gonzalez',
+   'lara',
    'Ing.Ejecucion en computacion e informatica',
-   'marcelo.gonzalez@usach.cl',
-   'marcelo',
-   '11.111.111-1');
-
+   'ignacio.lara@usach.cl',
+   'ignacio',
+   '13.333.333-3');

@@ -1,0 +1,8 @@
+[
+  {"name":"fire", "description": "this type rules"},
+  {"name":"water", "description": "this type is cool"},
+  {"name":"grass", "description": "this type sucks"},
+  {"name":"dragon", "description": "now even a tree is a dragon"},
+  {"name":"psychic", "description": "this is badass"},
+  {"name":"ghost", "description": "this scares me"}
+]
