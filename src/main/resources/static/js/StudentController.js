@@ -1,11 +1,11 @@
 angular.module('mainModule').controller('StudentController', function($scope, $http,$window){
 
 	
-	$scope.s = [];
+	//$scope.students = [];
 
 	$scope.getStudents = function() {
 		$http.get('http://localhost:1414/student/all').then(function(data) {
-			$scope.s = data.data;
+			$scope.students = data.data;
 		});
 	};
 

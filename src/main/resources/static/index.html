@@ -8,8 +8,7 @@
 
 <div id="main">
       <div id="content" class="container" ng-controller="StudentController"  ng-init="getStudents()" ng-show="students != null">
-        <div class="student-info-bottom" style="height:300px;overflow:auto;">
-           <table style="width:100%">
+           <table >
            <tr>
             <th><b>Nombre</b></th>
                 <th><b>Apellido</b></th>
@@ -27,9 +26,13 @@
                <td>{{student.email}}</td>
             </tr>
           </table> 
-        </div>
+        
       </div>
     </div>
+
+
+
+  
 
   <!-- Tweet -->
     <div id="tweet">
