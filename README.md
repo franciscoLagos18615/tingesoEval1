@@ -4,4 +4,6 @@ Trabajo numero de 1 de tingeso
 
 * Luego en la carpeta raiz mvn spring-boot:run
 
-* Importante, recordar cambiar las credenciales de mysql en application.properti
+* Importante, recordar cambiar las credenciales de mysql en application.properties
+
+* Luego ir a locahost:1414 y ver la funcionalidad
