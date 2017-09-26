@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path="/student")
 
+//controller of student
 public class StudentController {
 
     @Autowired
     private StudentRepository studentRepository;
 
+    //method get that extracts students from database
     @GetMapping(path = "/all")
     public @ResponseBody Iterable<Student> getAllStudents(){
         return studentRepository.findAll();
@@ -26,7 +28,7 @@ public class StudentController {
      return studentRepository.findOne(lid);
      //return studentRepository.findOne(lid);
     }
-
+    //method post that creates students
     @RequestMapping(path ="/new", method= RequestMethod.POST)
 
     public Integer createStudent(@RequestBody Student student){

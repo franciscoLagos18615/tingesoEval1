@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name="Student")
 
+
+//model that create attributes in table Student
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
