@@ -4,19 +4,37 @@
   <meta charset="utf-8">
   <title>Aplicacion basica Tingeso</title>
   <link rel="stylesheet" href="css/bootstrap.css"/>
+  <style>          
+           body::after {
+             content: "";
+             background: url(http://www.coolihd.com/wp-content/uploads/2016/09/estudiantes_6.jpg);
+             opacity: 0.28;
+             top: 0;
+             left: 0;
+             bottom: 0;
+             right: 0;
+             position: absolute;
+             z-index: -1;   
+           }           
+        </style>
 </head>
 
 <div id="main">
       <div id="content" class="container" ng-controller="StudentController"  ng-init="getStudents()" ng-show="students != null">
-           <table >
-           <tr>
-            <th><b>Nombre</b></th>
-                <th><b>Apellido</b></th>
-                <th><b>Rut</b></th>
-                <th><b>Carrera</b></th>
-                  <th><b>Año Ingreso</b></th>
-                <th><b>Email</b></th>
-            </tr>
+
+         <header>
+            <h2>Listado de Alumnos</h2>
+          </header>
+           <table width="80%" >
+          <tr>
+            <th scope="col">Nombre </th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Rut</th>
+            <th scope="col">Carrera</th>
+            <th scope="col">Año Ingreso</th>
+            <th scope="col">Email</th>
+          </tr>
+
             <tr ng-repeat="student in students">
               <td>{{student.primer_nombre}}</td>
               <td>{{student.apellido}}</td>
@@ -55,29 +73,51 @@
           <div class="form" ng-controller="StudentController" >
             <div class= "container123">
             <label for="primer_nombre"><font color="Black">Nombre:</font></label>
-            <input id="primer_nombre" ng-model="primer_nombre" type="text" />
+            <input id="primer_nombre" ng-model="primer_nombre" type="text" required/>
             </div>
             <div class= "container123">
             <label for="apellido"><font color="Black">Apellido:</font></label>
-            <input id="apellido" ng-model="apellido" type="text" />
+            <input id="apellido" ng-model="apellido" type="text" required="text"/>
             </div>
             <div class= "container123">
             <label for="rut"><font color="Black">Rut:</font></label>
-            <input id="rut" ng-model="rut" type="text" />
+            <input id="rut" ng-model="rut" type="text" required="text"/>
             </div>
             <div class= "container123">
             <label for="email"><font color="Black">Email:</font></label>
-            <input id="email" ng-model="email" type="text" />
+            <input id="email" ng-model="email" type="email" />
             </div>
             <div class= "container123">
             <label for="carrera"><font color="Black">Carrera:</font></label>
-            <input id="carrera" ng-model="carrera" type="text" />
+            <select name="carrera" ng-model="carrera">
+              <option value="Ing.Civil Informatica">Ing.Civil Informatica</option>
+              <option value="Ing.Civil Quimica">Ing.Civil Quimica</option>
+              <option value="Ing.Civil Obras Civiles">Ing.Civil Obras Civiles</option>
+              <option value="Ing.Civil Metalurgia">Ing.Civil Metalurgia</option>
+              <option value="Ing.Civil Mecanica">Ing.Civil Mecanica</option>
+              <option value="Ing.Civil Electrica">Ing.Civil Electrica</option>
+              <option value="Ing.Civil Industrial">Ing.Civil Industrial</option>
+              <option value="Ing.Civil en Minas">Ing.Civil En Minas</option>
+              <option value="Ing.Civil Geografia">Ing.Civil Geografia</option>
+              <option value="Ing.Ejecucion Informatica">Ing.Ejecucion Informatica</option>
+              <option value="Ing.Ejecucion Quimica">Ing.Ejecucion Quimica</option>
+              <option value="Ing.Ejecucion Metalurgia">Ing.Ejecucion Metalurgia</option>
+              <option value="Ing.Ejecucion Mecanica">Ing.Ejecucion Mecanica</option>
+               <option value="Ing.Ejecucion Electrica">Ing.Ejecucion Electrica</option>
+              <option value="Ing.Ejecucion Industrial">Ing.Ejecucion Industrial</option>
+              <option value="Ing.Ejecucion En Minas">Ing.Ejecucion En Minas</option>
+              <option value="Ing.Ejecucion En Minas">Ing.Ejecucion En Minas</option>
+              <option value="Ing.Ejecucion En Geomensura">Ing.Ejecucion En Geomensura</option>
+              <option value="Ing.Ambiental">Ing.Ambiental</option>
+              <option value="Otra">Otra</option>
+            </select>
+            <!--input id="carrera" ng-model="carrera" type="text" required="text" /-->
             </div>
             <div class= "container123">
             <label for="anio_ingreso"><font color="black">Año Ingreso:</font></label>
             <input id="anio_ingreso" ng-model="anio_ingreso" type="number" />
             </div>
-            <button  type="submit" class="btn btn-default" ng-click="addStudent()">Ingresar alumno</button>
+            <button  type="submit" class="btn btn-success" ng-click="addStudent()">Ingresar alumno</button>
           </div>
           
         </section>
